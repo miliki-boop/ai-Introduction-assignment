@@ -45,9 +45,6 @@ class DecisionTree:
         return node.value
 
     def _grow_tree(self, X, y, depth=0):
-        '''
-            递归构建决策树
-        '''
         n_samples, n_features = X.shape # X.shape = (60000,784)
         n_labels = len(np.unique(y)) # n_labels = 10
         # 如果满足以下任一条件，则停止生长树
